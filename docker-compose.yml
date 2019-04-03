@@ -1,28 +1,26 @@
 version: '3'
 
-volumes:
-  db-data:
-    external: false
-
 services:
   db:
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER:
-      POSTGRES_PASSWORD:
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-    ports:
-      - "3307:3306"
+      POSTGRES_DB: hiking_trails_challenge
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
   app:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/hiking_trails_challenge
+      - ".:/hiking_trails_challenge"
     ports:
-      - "8080:8080"
+      - "3000:3000"
     depends_on:
       - db
     links:
       - db
+    environment:
+      DB_NAME: hiking_trails_challenge
+      DB_USERNAME: docker
+      DB_PASSWORD: docker
+      DB_HOST: db
