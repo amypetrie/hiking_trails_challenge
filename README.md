@@ -18,6 +18,8 @@ We have a need to record up and down votes on Colorado's Best hiking trails!  Al
 * Specs are encouraged!
 
 # Additional Project Links:
-* Agile project board: https://github.com/amypetrie/hiking_trails_challenge/projects/1
-* DockerHub repository page: https://cloud.docker.com/repository/docker/amypetrie/hiking_trails_challenge/general
-* Heroku deployment: https://hiking-trails-challenge.herokuapp.com/
+Agile project board: https://github.com/amypetrie/hiking_trails_challenge/projects/1
+API Github Repo page: https://github.com/amypetrie/hiking_trails_challenge
+API Heroku deployment: https://hiking-trails-challenge.herokuapp.com/
+Pub-Sub Github Repo page: https://github.com/amypetrie/hike_vote_microsvc
+DockerHub repository page: https://cloud.docker.com/repository/docker/amypetrie/hiking_trails_challenge/general
